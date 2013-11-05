@@ -1,0 +1,33 @@
+CREATE USER 'demo' IDENTIFIED BY  '1234';
+
+CREATE DATABASE demo;
+
+GRANT ALL PRIVILEGES ON demo.* TO 'demo';
+
+CREATE TABLE IF NOT EXISTS demo1.posts (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    postTypeId INT,
+	creationDate LONG,
+	score INT,
+	viewCount INT,
+	body VARCHAR(255),
+	ownerUserId INT,
+	lastActivityDate LONG,
+	title VARCHAR(255),
+	answerCount INT,
+	commentCount INT,
+	favoriteCount INT,
+	tags VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+
+/*
+//pour importer les données dans mysql. tout d'abord telecharger le fichier du hdfs et le nommer posts.csv
+mysqlimport --local --fields-terminated-by='\t' --columns='id,postTypeId,creationDate,score,viewCount,body,ownerUserId,lastActivityDate,title,answerCount,commentCount,favoriteCount,tags' -h mysql-1 -u demo -p demo ~/posts.csv
+
+//pour tester l'import
+mysqldump -u demo -p -t -T/tmp demo --fields-enclosed-by=\" --fields-terminated-by=, -h 10.48.19.185
+
+select * into outfile '/tmp/posts.csv' fields terminated by ',' optionally enclosed by '"' lines terminated by '\n' from posts;
+*/
