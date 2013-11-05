@@ -1,8 +1,8 @@
 # cdh4-manager
 
-**Type**		: SERVICE  
-**Status**		: TESTED
-**Description**	: cloudera manager recipe 1.0.0   
+**Type**		: SERVICE 	<br>
+**Status**		: TESTED	<br>
+**Description**	: cloudera manager recipe 1.0.0   <br>
 **Maintainer**	: Fastconnect  
 **Maintainer email**	:   
 **Contributors**		: 
@@ -15,7 +15,7 @@
 
 ## Recipe version
 
-* **Date** : Month Day Year (tag creation date)
+* **Date** : July 26th 2013
 	* **Tag/Branch Name** 	: cloudera manager recipe 1.0.0  
 	* **Recipe Base URL**   : [https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes](https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes)
 
@@ -23,30 +23,20 @@
 
 * **Amazon EC2 Cloud**
 	* **precise64** : Ubuntu precise 64 bits
-
-* **Virtual Box Cloud**
-	* **precise64** : Ubuntu precise 64 bits
+	* **ImageID**	: eu-west-1/ami-fc7a6e88
 
 ## Details
 
 ### Service dependencies
-
-Dependencies between services <> applications
-
-* **Service 1** :
-	* **Service TAG** 	: wich tag you're using for this application version
-	* **Details**		: .....
-* **Service 2** :
-	* **Service TAG** 	: wich tag you're using for this application version
-	* **Details**		: .....
+None
 
 ### Service description
 This folder contains a service recipe for cloudera manager 4.
 
 Cloudera manager Version tested: 4.6.1
 
-The Cloudera manager is available on the installed node at the port 7180
-The Hue interface is available on the installed node (MasterNode) at the port 8888
+The Cloudera manager gui is available on the installed node at the port 7180
+The Hue gui is available on the installed node (MasterNode) at the port 8888
 
 ### Properties file
 
@@ -64,7 +54,7 @@ The Hue interface is available on the installed node (MasterNode) at the port 88
 
 * **Property name** : *services*
 	* REQUIRED
-	* **Description** : an array of cloudera services to install and configure on the cluster
+	* **Description** : an array of cloudera services to install and configure on the cluster. See the .properties files for example.
 
 * **Property name** : *clouderaHadoopVersion*
 	* REQUIRED
@@ -81,7 +71,7 @@ The Hue interface is available on the installed node (MasterNode) at the port 88
 * **Command Name** 	: *displayHosts*
 	* **Action** 	: displays couple ipAddress - hostName of all hosts in the cluster.
 	* **Usage**		: invoke cdh4-manager displayHosts [ipType]
-		**Args**		ipType 	==> the ip type display. values are "private" for privates ip ; "public" for public ip. default to public
+		* **Args**	: ***ipType*** 	==> the ip type display. *values* are "*private*" for privates ip ; "*public*" for public ip. default to public
 	* **Example**	: invoke cdh4-manager displayHosts private
 					  invoke cdh4-manager displayHosts 					#displays public ips
 
