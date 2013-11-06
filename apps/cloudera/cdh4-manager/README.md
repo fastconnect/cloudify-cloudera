@@ -35,8 +35,8 @@ This folder contains a service recipe for cloudera manager 4.
 
 Cloudera manager Version tested: 4.6.1
 
-The Cloudera manager gui is available on the installed node at the port 7180
-The Hue gui is available on the installed node (MasterNode) at the port 8888
+The Cloudera manager gui is available on the installed node at the port *7180*
+The Hue gui is available on the installed node (MasterNode) at the port *8888*
 
 ### Properties file
 
@@ -46,7 +46,7 @@ The Hue gui is available on the installed node (MasterNode) at the port 8888
 	
 * **Property name** : *apiVersion*
 	* REQUIRED
-	* **Description** : The cm4 api version to use. Default to 4
+	* **Description** : The cm4 api version to use. Default to *4*
 	
 * **Property name** : *cluster*
 	* REQUIRED
@@ -58,21 +58,23 @@ The Hue gui is available on the installed node (MasterNode) at the port 8888
 
 * **Property name** : *clouderaHadoopVersion*
 	* REQUIRED
-	* **Description** : cloudera Hadoop version (cdh4 version): supported and tested version is 4.3.0
+	* **Description** : cloudera Hadoop version (cdh4 version): supported and tested version is *4.3.0*
 
 
 * **Property name** : *clouderaManagerVersion*
 	* REQUIRED
-	* **Description** : cloudera manager version (cm4 version): supported and tested version is 4.6.1
+	* **Description** : cloudera manager version (cm4 version): supported and tested version is *4.6.1*
 
 	
 ### Custom commands
 
 * **Command Name** 	: *displayHosts*
 	* **Action** 	: displays couple ipAddress - hostName of all hosts in the cluster.
-	* **Usage**		: invoke cdh4-manager displayHosts [ipType]
-		* **Args**	: ***ipType*** 	==> the ip type display. *values* are "*private*" for privates ip ; "*public*" for public ip. default to public
-	* **Example**	: invoke cdh4-manager displayHosts private
-					  invoke cdh4-manager displayHosts 					#displays public ips
+	* **Usage**		: *invoke cdh4-manager displayHosts [ipType]*
+		* **Args**	: 
+			* ***ipType*** 	==> the ip type display. possible values are "***private***" for privates ip ; "***public***" for public ip. default to public
+	* **Examples**	: 
+		* **invoke cdh4-manager displayHosts private**
+		* **invoke cdh4-manager displayHosts** 					*#displays public ips*
 
 ## Changelist
