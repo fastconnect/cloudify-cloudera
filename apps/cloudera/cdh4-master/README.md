@@ -39,7 +39,7 @@ Dependencies between services <> applications
 
 ### Service description
 This folder contains an application recipe for cloudera cdh4.
-manages installation of packages and configuration of master roles such as JobTracker, NameNode, HueServer, Oozie server, ... 
+manages installation of packages and configuration of **master roles** such as JobTracker, NameNode, HueServer, Oozie server, ... 
 Cloudera Services to configure are defined in the properties file of cdh4-manager service.
 
 ### Properties file
