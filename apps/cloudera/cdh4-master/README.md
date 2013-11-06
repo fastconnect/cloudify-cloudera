@@ -1,9 +1,9 @@
 # cdh4-master
 
 **Type**		: SERVICE  
-**Status**		: TESTED
-**Description**	: cloudera cdh4 master recipe 1.0.0   
-**Maintainer**	: Fastconnect  
+**Status**		: TESTED  
+**Description**		: cloudera cdh4 master recipe 1.0.0   
+**Maintainer**		: Fastconnect  
 **Maintainer email**	:   
 **Contributors**		: 
 **Homepage**			:  
@@ -17,7 +17,7 @@
 
 * **Date** : Month Day Year (tag creation date)
 	* **Tag/Branch Name** 	: cloudera cdh4 master recipe 1.0.0 
-	* **Recipe Base URL**   : [https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes](https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes)
+	* **Recipe Base URL**   : [https://github.com/fastconnect/cloudify-cloudera](https://github.com/fastconnect/cloudify-cloudera)
 
 ## Tested Cloud & OS
 
