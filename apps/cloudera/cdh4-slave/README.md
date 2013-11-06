@@ -1,7 +1,7 @@
 # cdh4-slave
 
 **Type**		: SERVICE  
-**Status**		: TESTED
+**Status**		: TESTED  
 **Description**	: cloudera cdh4 slave recipe 1.0.0   
 **Maintainer**	: Fastconnect  
 **Maintainer email**	:   
@@ -17,15 +17,14 @@
 
 * **Date** : Month Day Year (tag creation date)
 	* **Tag/Branch Name** 	: cloudera cdh4 slave recipe 1.0.0 
-	* **Recipe Base URL**   : [https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes](https://fastconnect.org/svn/FastConnect/projects/cloudify/recipes)
+	* **Recipe Base URL**   : [https://github.com/fastconnect/cloudify-cloudera](https://github.com/fastconnect/cloudify-cloudera)
 
 ## Tested Cloud & OS
 
 * **Amazon EC2**
 	* **precise64** : Ubuntu precise 64 bits
+	* **ImageID**	: eu-west-1/ami-fc7a6e88
 
-* **Virtual Box Cloud**
-	* **precise64** : Ubuntu precise 64 bits
 
 ## Details
 
@@ -33,12 +32,13 @@
 
 Dependencies between services <> applications
 
-* **Service 1** :
-	* **Service TAG** 	: wich tag you're using for this application version
-	* **Details**		: .....
-* **Service 2** :
-	* **Service TAG** 	: wich tag you're using for this application version
-	* **Details**		: .....
+* **cdh4-manager** :
+	* **Service TAG** 	: current version
+	* **Details**		: cdh4-slave depends on cdh4-manager
+
+* **cdh4-master** :
+	* **Service TAG** 	: current version
+	* **Details**		: cdh4-slave depends on cdh4-master
 
 ### Service description
 This folder contains an application recipe for cloudera cdh4.
@@ -50,24 +50,24 @@ Also configure nodes as mongoDB shards if necessary
 
 * **Property name** : *agentServerPort*
 	* REQUIRED
-	* **Description** :Default is 7182.
+	* **Description** :Default is *7182*.
 	
 * **Property name** : *agentListeningPort*
 	* REQUIRED
-	* **Description** :Default is 9000
+	* **Description** :Default is *9000*
 	
 * **Property name** : *mongoDPort*
 	* REQUIRED
-	* **Description** :the port for the mongoD instance. Default is 27018
+	* **Description** :the port for the mongoD instance. Default is *27018*
 
 * **Property name** : *clouderaHadoopVersion*
 	* REQUIRED
-	* **Description** : cloudera Hadoop version (cdh4 version): supported and tested version is 4.3.0
+	* **Description** : cloudera Hadoop version (cdh4 version): supported and tested version is *4.3.0*
 
 
 * **Property name** : *clouderaManagerVersion*
 	* REQUIRED
-	* **Description** : cloudera manager version (cm4 version): supported and tested version is 4.6.1
+	* **Description** : cloudera manager version (cm4 version): supported and tested version is *4.6.1*
 
 ### Custom commands
 None
