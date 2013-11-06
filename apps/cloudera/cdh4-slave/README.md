@@ -42,7 +42,7 @@ Dependencies between services <> applications
 
 ### Service description
 This folder contains an application recipe for cloudera cdh4.
-manages installation of packages and configuration of slaves roles such as Tasktracker and DataNode... 
+manages installation of packages and configuration of **slaves roles** such as Tasktracker and DataNode... 
 cloudera Services to configure are defined in the properties file of cdh4-manager service.
 Also configure nodes as mongoDB shards if necessary
 
