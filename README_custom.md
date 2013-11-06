@@ -68,12 +68,6 @@ Cloudera services supported:
 
 ### Properties file
 
-* **Property name** : *myproperty1*
-	* REQUIRED | NOT_REQUIRED
-	* **Description** : why this property
-* **Property name** : *myproperty2*
-	* REQUIRED | NOT_REQUIRED
-	* **Description** : why this property
 
 ### Custom commands
 
