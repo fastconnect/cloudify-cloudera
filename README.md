@@ -48,10 +48,10 @@ The Cloudera manager is available on the installed node at the port 7180
 The Hue interface is available on the installed node (MasterNode) at the port 8888
 
 Via the different services configurations files in the application folder, you can specify various configurations:
-	- Cloudera cluster name to create
-	- Cloudera services to install and configure
-	- The use (set up) or not of mongoDb cluster
-	- various ports configurations
+	* Cloudera cluster name to create
+	* Cloudera services to install and configure
+	* The use (set up) or not of mongoDb cluster
+	* various ports configurations
 Custom commands are also available from services. For more details, refer to the documentation.
 
 Cloudera services supported:
